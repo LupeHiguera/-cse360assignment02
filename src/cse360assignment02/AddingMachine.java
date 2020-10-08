@@ -2,9 +2,10 @@ package cse360assignment02;
 
 public class AddingMachine {
     private int total;
+    private String myString = "0";
 
     /***
-     *
+     * Constructor
      */
     public AddingMachine () {
         total = 0;  // not needed - included for clarity
@@ -15,7 +16,7 @@ public class AddingMachine {
      * @return returns total
      */
     public int getTotal () {
-        return 0;
+        return total;
     }
 
     /***
@@ -23,6 +24,8 @@ public class AddingMachine {
      * @param value adds value to total
      */
     public void add (int value) {
+        total = total + value;
+        myString = myString + " + " + value;
     }
 
     /***
@@ -30,6 +33,9 @@ public class AddingMachine {
      * @param value value subtracts from total
      */
     public void subtract (int value) {
+        total = total - value;
+        myString = myString + " - " + value;
+
     }
 
     /***
@@ -37,12 +43,13 @@ public class AddingMachine {
      * @return message
      */
     public String toString () {
-        return "";
+        return myString;
     }
 
     /***
      * deletes everything
      */
     public void clear() {
+        myString = "0";
     }
 }
